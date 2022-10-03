@@ -15,7 +15,7 @@ const Portal = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    initializePage('뮤코 하우스');
+    initializePage('뮤코');
   }, [initializePage]);
 
   const tabsAProps = {
