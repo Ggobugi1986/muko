@@ -1,5 +1,6 @@
+import { articleDesktopRoutes, articleMobileRoutes } from 'services/article';
 import { portalDesktopRoutes, portalMobileRoutes } from 'services/portal';
 
-export const desktopRoutes = [...portalDesktopRoutes];
+export const desktopRoutes = [...articleDesktopRoutes, ...portalDesktopRoutes];
 
-export const mobileRoutes = [...portalMobileRoutes];
+export const mobileRoutes = [...articleMobileRoutes, ...portalMobileRoutes];
