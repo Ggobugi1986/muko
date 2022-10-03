@@ -19,10 +19,10 @@ deploy:
   edge: true
   provider: elasticbeanstalk
   region: "ap-northeast-2"
-  app: "muko"
-  env: "Muko-env"
+  app: "muko-test"
+  env: "Mukotest-env"
   bucket_name: elasticbeanstalk-ap-northeast-2-400153677200
-  bucket_path: "muko"
+  bucket_path: "muko-test"
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
