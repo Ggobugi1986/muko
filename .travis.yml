@@ -20,7 +20,7 @@ deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-2"
   app: "muko"
-  env: "Muko-env-1"
+  env: "Muko-env"
   bucket_name: elasticbeanstalk-ap-northeast-2-400153677200
   bucket_path: "muko"
   on:
