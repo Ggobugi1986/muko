@@ -38,6 +38,7 @@ const Board = () => {
           />
         </svg>
       </div>
+
       <motion.div
         className="opacity-0"
         animate={{ opacity: 1 }}
