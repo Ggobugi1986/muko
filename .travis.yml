@@ -20,3 +20,16 @@ after_success:
   - docker push ggobugi1986/muko-server
   - docker push ggobugi1986/muko-web
   - docker push ggobugi1986/muko-nginx
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: "ap-northeast-2"
+  app: "muko"
+  env: "Muko-env"
+  bucket_name: elasticbeanstalk-ap-northeast-2-400153677200
+  bucket_path: "muko"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
