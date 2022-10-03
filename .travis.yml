@@ -16,7 +16,9 @@ after_success:
   - docker build -t ggobugi1986/muko-server ./muko-server
   - docker build -t ggobugi1986/muko-web ./muko-web
   - docker build -t ggobugi1986/muko-nginx ./nginx
+
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
+
   - docker push ggobugi1986/muko-server
   - docker push ggobugi1986/muko-web
   - docker push ggobugi1986/muko-nginx
