@@ -16,6 +16,7 @@ after_success:
   - echo "Test Success"
 
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: "ap-northeast-2"
   app: "muko"
