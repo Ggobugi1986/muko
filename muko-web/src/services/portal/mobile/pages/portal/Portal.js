@@ -5,7 +5,7 @@ import { withReducer } from 'store';
 import { TabsA } from 'ui/mobile';
 import portalReducer from 'services/portal/mobile/slices';
 import { changeActiveTab } from 'services/portal/mobile/slices/uiSlice';
-import { Concert } from './tabPanels';
+import { About, Concert } from './tabPanels';
 
 const Portal = () => {
   const { activeTab } = useSelector((state) => state.portal.ui);
@@ -58,6 +58,7 @@ const Portal = () => {
   return (
     <div className="absolute inset-0 top-14">
       <TabsA {...tabsAProps} />
+      {activeTab === 'about' && <About />}
       {activeTab === 'concert' && <Concert />}
     </div>
   );

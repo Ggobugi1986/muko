@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { Footer, PaperA } from 'ui/mobile';
 import Board from './board';
-import { PastConcerts } from './components';
+import { Articles, Menu } from './components';
 
-const Concert = () => {
+const About = () => {
   const scrollY = useRef(null);
 
   const props = {
@@ -15,13 +15,14 @@ const Concert = () => {
       ref={scrollY}
       className="absolute inset-0 top-12 flex flex-col overflow-x-hidden overflow-y-scroll"
     >
-      <Board {...props} />
+      <Board />
       <PaperA>
-        <PastConcerts {...props} />
+        <Menu {...props} />
+        <Articles {...props} />
         <Footer />
       </PaperA>
     </div>
   );
 };
 
-export default Concert;
+export default About;
