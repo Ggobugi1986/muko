@@ -24,7 +24,7 @@ const Articles = ({ scrollY }) => {
     <div className="mb-4">
       <div className="flex items-center justify-between mb-2 px-4">
         <div className="text-lg font-semibold text-slate-900">
-          언론이 소개한 뮤코
+          언론에 소개된 뮤코
         </div>
 
         <div
