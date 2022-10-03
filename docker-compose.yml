@@ -1,13 +1,5 @@
 version: "3"
 services:
-  muko-server:
-    build:
-      context: ./muko-server
-      dockerfile: Dockerfile
-    container_name: muko-server-container
-    volumes:
-      - /app/node_modules
-      - ./muko-server:/app
   muko-web:
     build:
       context: ./muko-web
