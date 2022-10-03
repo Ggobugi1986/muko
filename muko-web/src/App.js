@@ -9,7 +9,7 @@ const App = () => {
   return (
     <System>
       <Layout />
-      learn react
+      <div className="text-white">learn react</div>
     </System>
   );
 };
