@@ -1,0 +1,25 @@
+version: "3"
+services:
+  muko-server:
+    build:
+      context: ./muko-server
+      dockerfile: Dockerfile.dev
+    container_name: muko-server-container
+    volumes:
+      - /app/node_modules
+      - ./muko-server:/app
+  muko-web:
+    build:
+      context: ./muko-web
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./muko-web:/app
+    stdin_open: true
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
