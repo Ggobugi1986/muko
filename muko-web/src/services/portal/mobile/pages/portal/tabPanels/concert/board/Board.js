@@ -12,24 +12,28 @@ const Board = () => {
         type: 'concert',
         title: ['공연을 소개하는', '문구를 입력해주세요'],
         subtitle: '문구를 입력해주세요',
+        image: 'violin',
       },
       {
         id: 1,
         type: 'concert',
         title: ['공연을 소개하는', '문구를 입력해주세요'],
         subtitle: '문구를 입력해주세요',
+        image: 'violin',
       },
       {
         id: 2,
         type: 'concert',
         title: ['공연을 소개하는', '문구를 입력해주세요'],
         subtitle: '문구를 입력해주세요',
+        image: 'violin',
       },
       {
         id: 3,
         type: 'concert',
         title: ['공연을 소개하는', '문구를 입력해주세요'],
         subtitle: '문구를 입력해주세요',
+        image: 'violin',
       },
     ],
   };

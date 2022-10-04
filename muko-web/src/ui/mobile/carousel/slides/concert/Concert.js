@@ -1,8 +1,9 @@
 import React from 'react';
+import Image from '../../image';
 import { motion } from 'framer-motion';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 
-const Concert = ({ title, subtitle }) => {
+const Concert = ({ title, subtitle, image }) => {
   return (
     <>
       <motion.div
@@ -33,14 +34,7 @@ const Concert = ({ title, subtitle }) => {
         </div>
       </motion.div>
 
-      <motion.div
-        className="absolute right-0"
-        style={{ right: -40, bottom: -40 }}
-        animate={{ right: -20, bottom: -40 }}
-        transition={{ duration: 0.25 }}
-      >
-        <img src="/assets/images/image1.png" alt="" className="w-60" />
-      </motion.div>
+      <Image image={image} />
     </>
   );
 };

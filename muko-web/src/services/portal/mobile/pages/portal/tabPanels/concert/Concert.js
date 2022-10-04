@@ -6,18 +6,14 @@ import { PastConcerts } from './components';
 const Concert = () => {
   const scrollY = useRef(null);
 
-  const props = {
-    scrollY,
-  };
-
   return (
     <div
       ref={scrollY}
       className="absolute inset-0 top-12 flex flex-col overflow-x-hidden overflow-y-scroll"
     >
-      <Board {...props} />
+      <Board scrollY={scrollY} />
       <PaperA>
-        <PastConcerts {...props} />
+        <PastConcerts scrollY={scrollY} />
         <Footer />
       </PaperA>
     </div>

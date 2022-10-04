@@ -1,3 +1,4 @@
+import Card from './card';
 import Carousel from './carousel';
 import Footer from './footer';
 import HeaderA from './headerA';
@@ -7,4 +8,14 @@ import PaperB from './paperB';
 import TabsA from './tabsA';
 import TabsB from './tabsB';
 
-export { Carousel, Footer, HeaderA, HeaderB, PaperA, PaperB, TabsA, TabsB };
+export {
+  Card,
+  Carousel,
+  Footer,
+  HeaderA,
+  HeaderB,
+  PaperA,
+  PaperB,
+  TabsA,
+  TabsB,
+};

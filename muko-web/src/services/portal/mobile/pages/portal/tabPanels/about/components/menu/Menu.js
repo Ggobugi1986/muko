@@ -22,7 +22,7 @@ const Menu = () => {
     <div className="flex flex-wrap p-3 mb-4">
       {menu.map((menuItem, index) => (
         <div key={index} className="flex-none w-1/2 h-12 p-1">
-          <div className="h-full flex items-center justify-center rounded bg-yellow-200">
+          <div className="h-full flex items-center justify-center border border-yellow-300 rounded bg-yellow-200">
             <div className="font-semibold text-slate-900">{menuItem.label}</div>
           </div>
         </div>

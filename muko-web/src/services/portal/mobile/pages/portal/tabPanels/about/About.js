@@ -6,10 +6,6 @@ import { Articles, Menu } from './components';
 const About = () => {
   const scrollY = useRef(null);
 
-  const props = {
-    scrollY,
-  };
-
   return (
     <div
       ref={scrollY}
@@ -17,8 +13,8 @@ const About = () => {
     >
       <Board />
       <PaperA>
-        <Menu {...props} />
-        <Articles {...props} />
+        <Menu scrollY={scrollY} />
+        <Articles scrollY={scrollY} />
         <Footer />
       </PaperA>
     </div>
