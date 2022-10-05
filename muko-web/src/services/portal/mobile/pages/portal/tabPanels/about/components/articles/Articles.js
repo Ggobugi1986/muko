@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLinkClick } from 'hooks/mobile';
+import { SectionHeader } from 'ui/mobile';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 
 const Articles = ({ scrollY }) => {
@@ -20,24 +21,14 @@ const Articles = ({ scrollY }) => {
     },
   ];
 
+  const sectionHeaderProps = {
+    title: '언론에 소개된 뮤코',
+    more: () => handleLinkClick(`/articles`, '언론 기사', 'top', scrollY),
+  };
+
   return (
     <div className="mb-4">
-      <div className="flex items-center justify-between mb-2 px-4">
-        <div className="text-lg font-semibold text-slate-900">
-          언론에 소개된 뮤코
-        </div>
-
-        <div
-          className="flex items-center space-x-2"
-          onClick={() =>
-            handleLinkClick(`/articles`, '언론 기사', 'top', scrollY)
-          }
-        >
-          <div className="text-sm font-semibold text-slate-900">더보기</div>
-          <HiOutlineArrowNarrowRight className="text-slate-900" />
-        </div>
-      </div>
-
+      <SectionHeader {...sectionHeaderProps} />
       <div className="flex pl-4 space-x-4 overflow-x-scroll">
         {articles.map((article) => (
           <div

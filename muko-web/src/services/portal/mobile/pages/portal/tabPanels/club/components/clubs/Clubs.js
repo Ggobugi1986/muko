@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'ui/mobile';
+import { Card, SectionHeader } from 'ui/mobile';
 
 const Clubs = () => {
   const clubs = [
@@ -19,7 +19,7 @@ const Clubs = () => {
     },
     {
       id: 3,
-      color: 'teal',
+      color: 'green',
       title: '동아리 이름',
       description: '동아리 설명',
       image: 'violin',
@@ -33,13 +33,13 @@ const Clubs = () => {
     },
   ];
 
+  const sectionHeaderProps = {
+    title: '동아리 살펴보기',
+  };
+
   return (
     <div className="mb-4">
-      <div className="flex items-center px-4 mb-1">
-        <div className="text-lg font-semibold text-gray-900">
-          동아리 살펴보기
-        </div>
-      </div>
+      <SectionHeader {...sectionHeaderProps} />
 
       <div className="flex flex-wrap px-3">
         {clubs.map((club) => (

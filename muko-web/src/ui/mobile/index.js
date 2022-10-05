@@ -5,6 +5,7 @@ import HeaderA from './headerA';
 import HeaderB from './headerB';
 import PaperA from './paperA';
 import PaperB from './paperB';
+import SectionHeader from './sectionHeader';
 import TabsA from './tabsA';
 import TabsB from './tabsB';
 
@@ -16,6 +17,7 @@ export {
   HeaderB,
   PaperA,
   PaperB,
+  SectionHeader,
   TabsA,
   TabsB,
 };

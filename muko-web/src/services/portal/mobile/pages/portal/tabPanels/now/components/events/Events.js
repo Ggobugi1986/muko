@@ -1,7 +1,9 @@
 import React from 'react';
+import { SectionHeader } from 'ui/mobile';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Events = () => {
-  const news = [
+  const events = [
     {
       id: 1,
       title: '우리의 여행',
@@ -19,19 +21,24 @@ const Events = () => {
     },
   ];
 
+  const sectionHeaderProps = {
+    title: '이벤트',
+    more: () => {},
+  };
+
   return (
     <div className="mb-4">
-      <div className="flex items-center mb-2 px-4">
-        <div className="text-lg font-semibold text-gray-900">이벤트</div>
-      </div>
+      <SectionHeader {...sectionHeaderProps} />
 
-      <div className="flex pl-4 space-x-4 overflow-x-scroll">
-        {news.map((news) => (
-          <div className="flex-none w-60 h-32 rounded bg-yellow-200"></div>
+      <Swiper>
+        {events.map((event) => (
+          <SwiperSlide>
+            <div className="h-32 px-4">
+              <div className="h-full bg-yellow-200" />
+            </div>
+          </SwiperSlide>
         ))}
-
-        <div className="flex-none" />
-      </div>
+      </Swiper>
     </div>
   );
 };
