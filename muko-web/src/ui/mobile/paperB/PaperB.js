@@ -1,19 +1,18 @@
-// Import React
 import React, { useContext } from 'react';
-
-// Import Contexts
 import { mobileLayoutContext } from 'contexts';
+import { motion } from 'framer-motion';
 
 const PaperB = ({ children }) => {
-  // Set UseContext Hooks
-  const { isTransitionCompleted } = useContext(mobileLayoutContext);
+  const { clientHeight } = useContext(mobileLayoutContext);
 
   return (
-    isTransitionCompleted && (
-      <div className="absolute inset-0 top-14 rounded-t-2xl bg-white">
-        {children}
-      </div>
-    )
+    <motion.div
+      className="fixed inset-0 rounded-t-2xl bg-white z-50"
+      style={{ top: clientHeight }}
+      animate={{ top: 56 }}
+    >
+      {children}
+    </motion.div>
   );
 };
 

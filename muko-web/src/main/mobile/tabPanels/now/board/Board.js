@@ -9,37 +9,37 @@ const Board = () => {
     slides: [
       {
         id: 0,
-        type: 'concert',
-        title: ['공연을 소개하는', '문구를 입력해주세요'],
+        type: 'event',
+        title: ['노래도 고르고', '커피도 받자'],
         subtitle: '문구를 입력해주세요',
-        image: 'violin',
+        image: 'coffee',
       },
       {
         id: 1,
-        type: 'concert',
-        title: ['공연을 소개하는', '문구를 입력해주세요'],
+        type: 'event',
+        title: ['노래도 고르고', '커피도 받자'],
         subtitle: '문구를 입력해주세요',
-        image: 'violin',
+        image: 'coffee',
       },
       {
         id: 2,
-        type: 'concert',
-        title: ['공연을 소개하는', '문구를 입력해주세요'],
+        type: 'event',
+        title: ['노래도 고르고', '커피도 받자'],
         subtitle: '문구를 입력해주세요',
-        image: 'violin',
+        image: 'coffee',
       },
       {
         id: 3,
-        type: 'concert',
-        title: ['공연을 소개하는', '문구를 입력해주세요'],
+        type: 'event',
+        title: ['노래도 고르고', '커피도 받자'],
         subtitle: '문구를 입력해주세요',
-        image: 'violin',
+        image: 'coffee',
       },
     ],
   };
 
   return (
-    <div className="flex-none relative z-10" style={{ height: boardHeight }}>
+    <div style={{ height: boardHeight }}>
       <Carousel {...carouselProps} />
     </div>
   );

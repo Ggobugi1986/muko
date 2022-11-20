@@ -23,7 +23,7 @@ const Articles = ({ scrollY }) => {
 
   const sectionHeaderProps = {
     title: '언론에 소개된 뮤코',
-    more: () => handleLinkClick(`/articles`, '언론 기사', 'top', scrollY),
+    more: () => handleLinkClick(`/articles`, '언론 기사', 'up'),
   };
 
   return (
@@ -35,12 +35,7 @@ const Articles = ({ scrollY }) => {
             key={article.id}
             className="flex-none w-48 p-2 border border-slate-300 rounded bg-slate-100"
             onClick={() =>
-              handleLinkClick(
-                `/article/${article.id}`,
-                '언론 기사',
-                'top',
-                scrollY
-              )
+              handleLinkClick(`/article/${article.id}`, '언론 기사')
             }
           >
             <div className="flex justify-center mb-2">

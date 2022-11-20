@@ -1,6 +1,16 @@
-import { articleDesktopRoutes, articleMobileRoutes } from 'services/article';
-import { portalDesktopRoutes, portalMobileRoutes } from 'services/portal';
+import loadable from '@loadable/component';
 
-export const desktopRoutes = [...articleDesktopRoutes, ...portalDesktopRoutes];
+const Article = loadable(() => import('services/article/mobile/pages/article'));
 
-export const mobileRoutes = [...articleMobileRoutes, ...portalMobileRoutes];
+export const desktopRoutes = [];
+
+export const mobileRoutes = [
+  {
+    path: '/',
+    element: <></>,
+  },
+  {
+    path: 'article/:id',
+    element: <Article />,
+  },
+];

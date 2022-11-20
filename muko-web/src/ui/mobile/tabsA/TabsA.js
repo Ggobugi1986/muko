@@ -1,15 +1,22 @@
-// Import React
 import React from 'react';
-
-// Import Other Modules
+import { useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
 const TabsA = ({ activeTab, tabs, layoutId }) => {
+  const location = useLocation();
+
   return (
     <motion.div
-      className="absolute inset-x-0 top-0 h-12 flex pl-2 overflow-x-scroll opacity-0"
-      animate={{ opacity: 1 }}
+      className="fixed inset-x-0 top-14 h-12 flex pl-2 overflow-x-scroll z-50"
+      style={{
+        backgroundColor:
+          location.pathname === '/' ? '#FFEB70' : 'rgb(15 23 42)',
+      }}
+      animate={{
+        backgroundColor:
+          location.pathname === '/' ? '#FFEB70' : 'rgb(15 23 42)',
+      }}
       transition={{ duration: 0.25 }}
     >
       {tabs.map((tab) => (

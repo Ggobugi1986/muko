@@ -3,38 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import { mobileLayoutContext, systemContext } from 'contexts';
 
 const useLinkClick = () => {
-  const {
-    boardHeight,
-    setTransitionAnimationFrom,
-    setTransitionAnimationTo,
-    setIsTransitionCompleted,
-  } = useContext(mobileLayoutContext);
+  const { setIsClosing } = useContext(mobileLayoutContext);
   const { setAppBarTitle } = useContext(systemContext);
 
   const navigate = useNavigate();
 
-  const handleLinkClick = (path, title, direction, scrollY) => {
+  const handleLinkClick = (path, title, isClosing) => {
     navigate(path);
+    setAppBarTitle(title);
 
-    if (title) {
-      setAppBarTitle(title);
-    }
-
-    if (direction) {
-      let from;
-      let to;
-
-      if (direction === 'top') {
-        from = 56 + 48 + boardHeight + scrollY.current.scrollTop;
-        to = 56;
-      } else if (direction === 'down') {
-        from = 56;
-        to = 56 + 48 + boardHeight;
-      }
-
-      setTransitionAnimationFrom(from);
-      setTransitionAnimationTo(to);
-      setIsTransitionCompleted(false);
+    if (isClosing) {
+      setIsClosing(true);
     }
   };
 

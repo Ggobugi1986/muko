@@ -1,39 +1,33 @@
-// Import React
 import React, { useContext } from 'react';
-
-// Import React-Router-Dom
 import { useLocation } from 'react-router-dom';
-
-// Import React-Redux
 import { useDispatch } from 'react-redux';
-
-// Import Contexts
 import { systemContext } from 'contexts';
-
-// Import Hooks
 import { useLinkClick } from 'hooks/mobile';
-
-// Import Actions
-import { changeActiveTab } from 'services/portal/mobile/slices/uiSlice';
-
-// Import Other Modules
+import { changeActiveTab } from 'store/slices/uiSlice';
 import { motion } from 'framer-motion';
 
 const HeaderA = () => {
-  // Set UseLocation Hook
   const location = useLocation();
 
-  // Set UseContext Hooks
   const { appBarTitle } = useContext(systemContext);
 
-  // Set Custom Hooks
   const handleLinkClick = useLinkClick();
 
-  // Set UseDispatch Hook
   const dispatch = useDispatch();
 
   return (
-    <div className="absolute inset-x-0 top-0 h-14 flex items-center px-2">
+    <motion.div
+      className="fixed inset-x-0 top-0 h-14 flex items-center px-2 z-50"
+      style={{
+        backgroundColor:
+          location.pathname === '/' ? '#FFEB70' : 'rgb(15 23 42)',
+      }}
+      animate={{
+        backgroundColor:
+          location.pathname === '/' ? '#FFEB70' : 'rgb(15 23 42)',
+      }}
+      transition={{ duration: 0.25 }}
+    >
       <div
         className="w-10 h-10 flex items-center justify-center rounded"
         onClick={() => {
@@ -76,7 +70,7 @@ const HeaderA = () => {
         </motion.div>
       </div>
       <div className="w-10 h-10 flex items-center justify-center rounded" />
-    </div>
+    </motion.div>
   );
 };
 

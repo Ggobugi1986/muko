@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Coffee = () => {
   return (
     <motion.div
-      className="absolute right-0 opacity-0"
+      className="absolute opacity-0"
       style={{ right: -40, bottom: -20 }}
       animate={{ right: -20, opacity: 1 }}
       transition={{ duration: 0.25 }}

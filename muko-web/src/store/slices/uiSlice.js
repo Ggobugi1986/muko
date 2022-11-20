@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const uiSlice = createSlice({
-  name: 'portal/ui',
+  name: 'ui',
   initialState: {
     activeTab: 'now',
   },

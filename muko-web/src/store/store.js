@@ -12,8 +12,8 @@ const store = configureStore({
 
 store.lazyReducers = {};
 
-export const withReducer = (name, lazyReducer) => (Component) => {
-  store.lazyReducers[name] = lazyReducer;
+export const withReducer = (key, lazyReducer) => (Component) => {
+  store.lazyReducers[key] = lazyReducer;
   store.replaceReducer(createRootReducer(store.lazyReducers));
 
   return (props) => <Component {...props} />;

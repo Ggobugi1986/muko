@@ -1,13 +1,13 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import appReducer from './appSlice';
+import uiReducer from './uiSlice';
 
 const rootReducer = combineReducers({
-  app: appReducer,
+  ui: uiReducer,
 });
 
 export const createRootReducer = (lazyReducers) => {
   const rootReducer = combineReducers({
-    app: appReducer,
+    ui: uiReducer,
     ...lazyReducers,
   });
 

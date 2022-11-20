@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { usePage } from 'hooks/mobile';
-import { withReducer } from 'store';
-import { TabsA } from 'ui/mobile';
-import portalReducer from 'services/portal/mobile/slices';
-import { changeActiveTab } from 'services/portal/mobile/slices/uiSlice';
+import { HeaderA, TabsA } from 'ui/mobile';
+import { changeActiveTab } from 'store/slices/uiSlice';
 import { About, Club, Concert, Now } from './tabPanels';
 
-const Portal = () => {
-  const { activeTab } = useSelector((state) => state.portal.ui);
+const Main = () => {
+  const { activeTab } = useSelector((state) => state.ui);
 
   const initializePage = usePage();
 
@@ -52,18 +50,19 @@ const Portal = () => {
         action: () => dispatch(changeActiveTab('about')),
       },
     ],
-    layoutId: 'portalTabsIndicator',
+    layoutId: 'mainTabsIndicator',
   };
 
   return (
-    <div className="absolute inset-0 top-14">
+    <>
+      <HeaderA />
       <TabsA {...tabsAProps} />
       {activeTab === 'about' && <About />}
       {activeTab === 'club' && <Club />}
       {activeTab === 'concert' && <Concert />}
       {activeTab === 'now' && <Now />}
-    </div>
+    </>
   );
 };
 
-export default withReducer('portal', portalReducer)(Portal);
+export default Main;

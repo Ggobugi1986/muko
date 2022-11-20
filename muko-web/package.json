@@ -3,24 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@juggle/resize-observer": "^3.4.0",
     "@loadable/component": "^5.15.2",
-    "@reduxjs/toolkit": "^1.8.5",
+    "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/user-event": "^14.4.3",
     "clsx": "^1.2.1",
-    "framer-motion": "^7.5.1",
+    "framer-motion": "^7.6.2",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
+    "react-icons": "^4.6.0",
     "react-redux": "^8.0.4",
-    "react-router-dom": "^6.4.1",
+    "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
-    "react-use-measure": "^2.1.1",
-    "swiper": "^8.4.2",
-    "web-vitals": "^2.1.4"
+    "swiper": "^8.4.4",
+    "web-vitals": "^3.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,9 +45,9 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.12",
-    "postcss": "^8.4.17",
-    "tailwindcss": "^3.1.8"
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1"
   },
   "jest": {
     "transformIgnorePatterns": [
