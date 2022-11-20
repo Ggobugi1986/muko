@@ -22,7 +22,7 @@ const Article = () => {
     title: '용인시민신문',
     leftButton: {
       icon: 'FiChevronDown',
-      action: () => handleLinkCliek('/', '뮤코 하우스', 'down'),
+      action: () => handleLinkCliek('/'),
     },
     rightButtons: [
       {
