@@ -1,4 +1,4 @@
-version: "3"
+version: "3.9"
 services:
   muko-server:
     image: ggobugi1986/muko-server
@@ -12,3 +12,8 @@ services:
       - /app/node_modules
       - ./muko-web:/app
     stdin_open: true
+  nginx:
+    restart: always
+    image: ggobugi1986/muko-nginx
+    ports:
+      - "80:80"
